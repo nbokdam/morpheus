@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project Morpheus</title>
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" type="text/css" href="/css/custom.css" />
+  <script type="application/javascript" src="/js/jquery-3.2.1.min.js"></script>
+  <script type="application/javascript" src="/js/bootstrap.min.js"></script>
+  <script type="application/javascript" src="/js/morpheus-client.js"></script>
+</head>
+<body>
+<!-- Static navbar -->
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Morpheus</a>
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li class="active"><a href="#">Lights</a></li>
+      </ul>
+      <!-- ul class="nav navbar-nav navbar-right">
+        <li><a href="../navbar/">Default</a></li>
+        <li class="active"><a href="./">Static top <span class="sr-only">(current)</span></a></li>
+        <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+      </ul -->
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+
+
+<div class="container">
+
+  <!-- Main component for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <h1>Lights</h1>
+    <div id="controllers" style="display: block; width: 100%">
+      <!--p><input id="rSlider" style="display: block; width: 100%; height: 100px" data-slider-id='rSliderData' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="100"/></p>
+      <p>GREEN</p>
+      <p><input id="gSlider" style="display: block; width: 100%; height: 100px" data-slider-id='gSliderData' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="100"/></p>
+      <p>BLUE</p>
+      <p><input id="bSlider" style="display: block; width: 100%; height: 100px" data-slider-id='bSliderData' type="text" data-slider-min="0" data-slider-max="255" data-slider-step="1" data-slider-value="100"/></p>
+      <p>TIME</p>
+      <p><input id="tSlider" style="display: block; width: 100%; height: 100px" data-slider-id='tSliderData' type="text" data-slider-min="0" data-slider-max="10000" data-slider-step="1" data-slider-value="2000"/></p-->
+      <label for="redslider">Red</label>
+      <input type="range" id="redslider" class="rng rng-red" min="0" max="255" value="100"/>
+      <label for="greenslider">Green</label>
+      <input type="range" id="greenslider"class="rng rng-green" min="0" max="255" value="100"/>
+      <label for="blueslider">Blue</label>
+      <input type="range" id="blueslider"class="rng rng-blue" min="0" max="255" value="100"/>
+      <label for="timeslider">Time</label>
+      <input type="range" id="timeslider"class="rng rng-time" min="0" max="30000" value="5000"/>
+      <button class="btn btn-lg" style="display: block; width: 100%" onclick="fadeLights()">Enlighten me!</button>
+    </div>
+  </div>
+
+</div> <!-- /container -->
+</body>
+</html>
